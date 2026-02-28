@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Painel do Mestre</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Painel do Mestre</h1>
+<button class="mode-btn" onclick="toggleMasterMode()">Modo Mestre</button>
+
+<div class="tabs">
+  <button onclick="showTab('clock', this)" class="active">Relógio</button>
+  <button onclick="showTab('initiative', this)">Iniciativa</button>
+  <button onclick="showTab('calendar', this)">Calendário</button>
+  <button onclick="showTab('settings', this)">Configurações</button>
+</div>
+
+<div id="clock" class="tab-content" style="display:block;">
+  <h2 id="worldNameDisplay"></h2>
+  <h1 id="time"></h1>
+  <p id="date"></p>
+  <p id="period"></p>
+  <p id="moon"></p>
+  <p id="weather"></p>
+
+  <div class="clock-controls">
+    <button onclick="startClock()">Iniciar</button>
+    <button onclick="pauseClock()">Pausar</button>
+    <button onclick="advanceHour()">+1 Hora</button>
+    <button onclick="advanceDay()">+1 Dia</button>
+  </div>
+</div>
+
+<div id="initiative" class="tab-content">
+  <h2>Controle de Combate</h2>
+  <h3 id="roundCounter">Rodada: 1</h3>
+
+  <div class="initiative-inputs">
+    <input type="text" id="initiativeName" placeholder="Nome">
+    <input type="number" id="initiativeValue" placeholder="Iniciativa">
+    <button onclick="addInitiative()">Adicionar</button>
+  </div>
+
+  <div id="initiativeList" class="initiative-list"></div>
+</div>
+
+<div id="calendar" class="tab-content">
+  <h2>Calendário</h2>
+  <h3 id="calendarMonthTitle"></h3>
+  <div id="calendarGrid" class="calendar-grid"></div>
+</div>
+
+<div id="settings" class="tab-content">
+  <h2>Configurações</h2>
+
+  <div class="config-inputs">
+    <input type="text" id="worldNameInput" placeholder="Nome do Mundo">
+    <input type="number" id="startDay" placeholder="Dia">
+    <input type="number" id="startMonth" placeholder="Mês">
+    <input type="number" id="startYear" placeholder="Ano">
+    <input type="number" id="multiplier" placeholder="Multiplicador">
+  </div>
+
+  <div class="config-buttons">
+    <button onclick="applySettings()">Salvar</button>
+    <button onclick="exportWorld()">Exportar</button>
+    <input type="file" onchange="importWorld(event)">
+    <button onclick="resetWorld()">Resetar Mundo</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
