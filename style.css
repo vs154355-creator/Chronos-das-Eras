@@ -1,0 +1,257 @@
+/* ===================================== */
+/* FUNDO GERAL */
+/* ===================================== */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Georgia', serif;
+    color: #e8e4d9;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(90,120,200,0.15), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(180,120,255,0.10), transparent 50%),
+        #0b1020;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* ===================================== */
+/* ABAS */
+/* ===================================== */
+.tabs {
+    margin-bottom: 30px;
+}
+.tabs button {
+    background: transparent;
+    border: 1px solid rgba(198,167,94,0.4);
+    color: #c6a75e;
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+.tabs button:hover {
+    background: rgba(198,167,94,0.1);
+    box-shadow: 0 0 15px rgba(198,167,94,0.5);
+}
+.tabs button.active {
+    background: rgba(198,167,94,0.15);
+    box-shadow: 0 0 20px rgba(198,167,94,0.8);
+}
+
+/* ===================================== */
+/* CONTAINER PRINCIPAL */
+/* ===================================== */
+.tab-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(15, 25, 45, 0.85);
+    border: 1px solid rgba(198,167,94,0.3);
+    box-shadow:
+        0 0 60px rgba(0,0,0,0.9),
+        inset 0 0 40px rgba(90,120,200,0.1);
+}
+
+/* ===================================== */
+/* RELÓGIO E CABEÇALHO */
+/* ===================================== */
+#time {
+    font-size: 3em;
+    font-weight: bold;
+    color: #3b82f6;
+    text-shadow:
+        0 0 15px rgba(59,130,246,0.8),
+        0 0 30px rgba(59,130,246,0.4);
+    letter-spacing: 4px;
+}
+
+/* ===================================== */
+/* PAINEL DE INFO */
+/* ===================================== */
+.info-panel {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(20,30,60,0.7);
+    border: 1px solid rgba(120,140,255,0.2);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+}
+
+/* ===================================== */
+/* BOTÕES GERAIS */
+/* ===================================== */
+button {
+    background: linear-gradient(135deg, #1a2b4a, #243a66);
+    color: #e8e4d9;
+    border: 1px solid rgba(198,167,94,0.4);
+    padding: 10px 20px;
+    margin: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+button:hover {
+    box-shadow: 0 0 15px rgba(198,167,94,0.7);
+    transform: translateY(-2px);
+}
+button:active {
+    transform: scale(0.97);
+}
+
+/* ===================================== */
+/* CALENDÁRIO */
+/* ===================================== */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.calendar-day {
+    padding: 10px 0;
+    border-radius: 10px;
+    background: rgba(40,60,100,0.5);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.calendar-day:hover {
+    background: rgba(59,130,246,0.3);
+    box-shadow: 0 0 10px rgba(59,130,246,0.5);
+}
+.calendar-day.active {
+    background: rgba(198,167,94,0.8);
+    color: black;
+    font-weight: bold;
+}
+
+/* ===================================== */
+/* CONFIGURAÇÕES */
+/* ===================================== */
+.config-card, .config-inputs {
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 18px;
+    background: rgba(20,30,55,0.75);
+    border: 1px solid rgba(198,167,94,0.3);
+    text-align: left;
+}
+
+.config-card label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.config-card input, .config-inputs input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(30,45,80,0.7);
+    color: #e8e4d9;
+}
+
+.config-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ===================================== */
+/* INICIATIVA */
+/* ===================================== */
+.initiative-inputs {
+    margin-top: 20px;
+}
+.initiative-inputs input {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(30,45,80,0.7);
+    color: #e8e4d9;
+}
+
+.initiative-list {
+    margin-top: 20px;
+}
+
+.initiative-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 12px;
+    background: rgba(50,70,120,0.6);
+    transition: 0.2s ease;
+}
+
+.initiative-item.active-turn {
+    border: 2px solid rgba(198,167,94,0.9);
+    background: rgba(198,167,94,0.15);
+}
+
+.initiative-item:hover {
+    background: rgba(80,110,200,0.5);
+}
+
+.initiative-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.initiative-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.initiative-stats input {
+    width: 70px;
+    padding: 4px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(30,45,80,0.7);
+    color: #e8e4d9;
+}
+
+/* BARRAS DE HP / PS / SAN */
+.stat-bar {
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    background: rgba(30,45,80,0.5);
+    overflow: hidden;
+}
+.stat-bar-fill {
+    height: 100%;
+    width: 100%;
+    background: green;
+    transition: width 0.3s;
+}
+.stat-ps { background: #3b82f6; }
+.stat-san { background: #f59e0b; }
+
+/* ===================================== */
+/* MODO MESTRE */
+.master-mode .tabs,
+.master-mode #settings,
+.master-mode #calendar {
+    display: none;
+}
+.master-mode {
+    background: #111;
+}
